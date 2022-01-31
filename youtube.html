@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>sample1</title>
+</head>
+<body>
+  <form id="form1" action="#">
+    <input type="text" id="input-message">
+    <input type="button" onclick="showMessage()" value="送信">
+  </form>
+  <p id="output-message"></p>
+  <script language="javascript" type="text/javascript">
+    var showMessage = () => {
+      var textbox = document.getElementById("input-message");
+      var inputValue = textbox.value;
+      var inputValue2 = inputValue.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/");
+      document.getElementById("mypic").src=inputValue2;
+
+    }
+  </script>
+</body>
+</html>
+
+
+<iframe id="mypic" src="" width="1600px" height="795px" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
