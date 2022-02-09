@@ -16,7 +16,6 @@
   </script>
 </head>
 <body style="background-color: #000;" onresize="res()" onload="res()">
-  <div style="margin: -3px 0 0 0 ;">
     <div class="container">
       <div class="area" style="  background-color: #000;">
         <span style="text-align: center;position: relative; top: 15%; color: #FFFFFF;">
@@ -102,14 +101,18 @@
       <div class="area">4</div>
       <div class="area">5</div>
       
-      <div style="color: #FFFFFF; position: fixed; top: 0px; width: 100%;height: 50px; text-align: center; background-color: rgba(0, 0, 0, 0.5); " >Tools</div>
+      <div style="font-size: 20px; color: #FFFFFF; position: fixed; top: 0px; width: 100%;height: 50px;background-color: rgba(0, 0, 0, 0.5); " >
+        <div style="margin: 10px; ">
+          Tools
+        </div>
+      </div>
     </div>
     <style>
 
       .container {
         overflow: auto;
         scroll-snap-type: y mandatory;
-        height: 100%;
+        height: 110vh;
       }
       .container::-webkit-scrollbar {  /* Chrome, Safari 対応 */
         display:none;
@@ -123,7 +126,7 @@
       }
       .area {
         scroll-snap-align: start;
-        height: 100%;
+        height: 110vh;
       }
     
       /* General Styling */
