@@ -1,147 +1,47 @@
+<html lang="ja">
 <head>
-  <script>
-    function res(){
-      var W = window.innerWidth
-      var H = window.innerHeight
-      console.log("Width:" + W);
-      console.log("Height:" + H);
-      if (W <= 900){
-        location.href = 'smartphone.html';
-      }
-      else if (H <= 500){
-        location.href = 'smartphone.html';
-      }
-    };
-    
-  </script>
-</head>
-<body style="background-color: #000;" onresize="res()" onload="res()">
-    <div class="container">
-      <div class="area" style="  background-color: #000;">
-        <span style="text-align: center;position: relative; top: 15%; color: #FFFFFF;">
-              <div style="font-family: serif; font-size: 400%;">
-                  Welcome to Fumichannel!!
-              </div>
-              <br>
-                <span style="position:relative; top: 10%; left: -20%;" width="40%" height="auto" >
-                  <p>
-                      初めましての方は初めまして、
-                      <br>
-                      <span style="font-size: 200%;">
-                          そうじゃない方も初めまして(は?)
-                      </span>
-                      <br>
-                      僕は、Minecraftで高速道路を作っています。
-                      <br>
-                      サバイバルはほぼやらないのでMinecraftの熟練度(?)でいえば
-                      <br>
-                      初心者レベルだと思います。
-                  </p>
-                </span>
-                <span onclick="youtube()">
-                  <img style="position:relative; top: -20%; left: 55%;" width="40%" height="auto" src="sum.jpg">
-                <div style="position:relative; top: -26%; left: 55%; width: 22%; font-size: 200%; background-color: rgba(172, 172, 172, 0.85);">Youtube で観る</div>
-                  <script>
-                    function youtube(){
-                      window.open('https://youtu.be/3TvefmsL_rg', '_blank')
-                    }
-          
-                  </script>
-
-              </span>
-          <div class="box">Go to Next page:</div>
-
-          <style>
-    .link{
-      margin:10px 0;
-    }
-    
-    .box{
-      animation: flash 1.1s linear infinite;
-      position: absolute; 
-      text-align: left;
-      margin:0px;
-      bottom: 0%;
-      left: 0%;
-    }
-  @keyframes flash {
-    0%,100% {
-      opacity: 0;
-      }
-    50% {
-      opacity: 1;
-      }
-    }
-    </style>
-
-
-      </div>
-
-
-      <div class="area" style="  background-color: rgb(0, 103, 0);text-align: center; color: #FFFFFF;">
-          <div style="font-family: serif; position: relative; top: 15%;">
-            <div style="font-size: 400%;">
-              I made abowt...
-            </div>
-            <div style="font-size: 200%; border: 20px rgb(0, 0, 0); ">
-              適当な高速道路、<br>
-              適当なWebサイト、<br>
-              適当な路線図、<br>
-              適当な楽曲。<br>
-            </div>
-            <div style="font-size: 75%; position: absolute; left: 60%;">
-            ひでぇなオイ()
-            </div>
-          </div>
-          <br>
-
-      </div>
-      
-      <div class="area">3</div>
-      <div class="area">4</div>
-      <div class="area">5</div>
-      
-      <div style="font-size: 20px; color: #FFFFFF; position: fixed; top: 0px; width: 100%;height: 50px;background-color: rgba(0, 0, 0, 0.5); " >
-        <div style="margin: 10px; ">
-          Tools
-        </div>
-      </div>
-    </div>
+    <meta charset="utf-8"/>
     <style>
-
-      .container {
-        overflow: auto;
-        scroll-snap-type: y mandatory;
-        height: 110vh;
-      }
-      .container::-webkit-scrollbar {  /* Chrome, Safari 対応 */
-        display:none;
-      }
-    
-    
-    
-    
-      body::-webkit-scrollbar {
-          display:none;
-      }
-      .area {
-        scroll-snap-align: start;
-        height: 110vh;
-      }
-    
-      /* General Styling */
-      body {
-        font-size: 1rem;
-        color: #000;
-      }
-    
-      .area:nth-child(even) {
-        background-color: #0db;
-      }
-      .area:nth-child(odd) {
-        background-color: #0bd;
-      }
+        .header{
+            position: fixed;
+            width: 100%; 
+            height: 100px;
+            background-color: rgba(0,0,0,0.6);
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;/* 左右中央を指定しています */
+            align-items: center;
+            height: 50px;/* 高さは適宜変更してください */
+        }
+        .close-header{
+            width: 50px; 
+            top: 0px;
+            right: 0px;
+        }
     </style>
-  </div>
-</body>
+</head>
+<header class="header">
+    <div>
+    Hi 
+    </div>
+</header>
+<body style="margin:0px;">
+    <div style="width: 100%;height: 50px;background-color: rgb(0,0,0);"></div>
 
+    <div>
+        <h1>
+            Welcome to Fumichannel.
+        </h1>
+        <p>
+            ここは、Fumichannelの作りかけホームページです。更新まで暫くお待ち下さい。
+        </p>
+    </div>
+
+
+
+    <div style="width: 100%; height: 500%;">
+        ------ここから空白------
+    </div>
+
+
+</body>
