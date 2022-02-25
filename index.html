@@ -1,67 +1,65 @@
-<html lang="ja">
 <head>
-    <title>Fumichannel</title>
-    <meta charset="utf-8"/>
-    <style>
-        @font-face {
-            font-family: 英語筆記体フォント;
-            src: url('フォント/英語筆記体フォント.ttf') format("opentype");
-            /*英語筆記体フォント = CedarvilleCursive-Regular*/
+<meta property="og:title" content="ホーム - Fumichannel" />
+<meta property="og:description" content="Fumichannelのホームページです。以上" />
+<meta property="og:url" content="fumichannel.github.io" />
+<meta property="og:site_name" content="home" />
+<meta property="og:locale" content="ja_JP"  />
+<title>ホーム</title>
 
-        }
-        @font-face {
 
-font-family: あんずもじ;
-src: url('フォント/あんずもじ.ttf') format("opentype");
-/*あんずもじ = http://www8.plala.or.jp/p_dolce/　　*/
+<link href="fonts/fonts.css" rel="stylesheet" type="text/css">
 
-        }
-        h1{
-            font-family:英語筆記体フォント;
-            font-size: 100px;
-            
-        }
-        .header{
-            position: fixed;
-            width: 100%; 
-            height: 100px;
-            background-color: rgba(0,0,0,0.6);
-            color: #FFFFFF;
-            display: flex;
-            justify-content: center;/* 左右中央を指定しています */
-            align-items: center;
-            height: 50px;/* 高さは適宜変更してください */
-        }
-        .close-header{
-            width: 50px; 
-            top: 0px;
-            right: 0px;
-            
-        }
-    </style>
+
+
+<!-- 599pxまで--><link href="phone.css" rel="stylesheet" type="text/css" media="(max-width: 599px)" >
+
+<!-- 600-899px --><link href="tablet.css" rel="stylesheet" type="text/css"media="(min-width: 600px) and (max-width: 899px)" >
+
+<!-- 900px- --><link href="desktop.css" rel="stylesheet" type="text/css"media="(min-width: 960px)" >
+
+
+
+
+
+
+
 </head>
 
-
-<header class="header">
-    <div>
-    Hi 
+<body style="margin: 0;">
+<header style="font-family: あんず-もじ;">
+    <link href="header.css" rel="stylesheet" type="text/css">
+    <div class="header">
+    <a class="title" href="#">Fumi-channel</a>
+    <nav class="nav">
+    <ul class="menu-group">
+        <li class="menu-item"><a href="#">Home</a></li>
+        <li class="menu-item"><a href="#">Mod</a></li>
+        <li class="menu-item"><a href="#">Web app</a></li>
+        <li class="menu-item"><a href="#">maps</a></li>
+        <li class="menu-item"><a href="#">...</a></li>
+    </ul>
+    </nav>
     </div>
+    <div style="height: 60px;"></div>
 </header>
 
+<div class="横メニューバー">
+    <link href="menu.css" rel="stylesheet" type="text/css">
+    <h3>
+        横メニューバー
+    </h3>
+    <ul>
+        <li>
+            ここには何もありません
+        </li>
+    </ul>
 
-<body style="margin:0px;">
-    <div style="width: 100%;height: 50px;background-color: rgb(0,0,0);">
-    </div>
-    メニュー予定地
-    <div style="position:absolute;width:80%; height: 100%; left: 20%; color: #5f4330;">
-        <h1>
-            Welcome to Fumichannel.
-        </h1>
-        <p>
-            ここは、Fumichannelの作りかけホームページです。更新まで暫くお待ち下さい。
-        </p>
-        <div style="width: 100%; height: 500%;">
-            ------ここから空白------
-        </div>
-    </div>
+</div>
+
+
+<div class="bodie">
+<h1>
+    Welcome to Fumichannel
+</h1>
+<div style="height: 1000px;"></div></div>
 </body>

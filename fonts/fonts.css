@@ -1,0 +1,12 @@
+
+    /*英語筆記体フォント = CedarvilleCursive-Regular*/
+    @font-face {
+        font-family: 英語筆記体フォント;
+        src: url('英語筆記体フォント.ttf') format("opentype");
+    }
+
+    /*あんず-もじ = http://www8.plala.or.jp/p_dolce/*/
+    @font-face {
+        font-family: あんず-もじ;
+        src: url('あんず-もじ.ttf') format("opentype")
+        ;}
