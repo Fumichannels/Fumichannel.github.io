@@ -7,6 +7,6 @@
 
     /*あんず-もじ = http://www8.plala.or.jp/p_dolce/*/
     @font-face {
-        font-family: あんず-もじ;
+        font-family: あんずもじ;
         src: url('あんず-もじ.ttf') format("opentype")
         ;}
