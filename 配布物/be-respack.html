@@ -1,0 +1,87 @@
+<script>
+    document.cookie = 'old=27';
+    document.cookie = 'address=Tokyo';
+    let name = encodeURIComponent('田中');
+    document.cookie = 'name=' + name;
+    
+    let e = document.getElementById('msg');
+    e.insertAdjacentHTML('afterend', '<p>' + document.cookie + '</p>');
+    </script>
+<div style="font-size: 40px;">リアルな高速道路Mod</div>
+<div style="font-size: 24px;">Real HighWay Resouce Pack - 1.0.1 mc1.18.10</div>
+
+
+<div class="button05" style="margin: 20px;">
+    <a href="RealHighway.mcpack" download="realhighwaymod.mcpack">
+        ダウンロード
+        <span style="display: inline-block;" class="gg-software-download"></span>
+    </a>
+  </div>
+
+
+<style>.gg-software-download {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 6px;
+    border: 2px solid;
+    border-top: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-top: 8px
+}
+.gg-software-download::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+    left: 2px;
+    bottom: 4px
+}
+.gg-software-download::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+    left: 5px;
+    bottom: 5px
+}
+
+
+
+.button05 a {
+  padding: 1em 2em;
+  width: 300px;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #cccccc;
+  box-shadow: 0 5px 0 #aaaaaa;
+  transition: 0.3s;
+}
+
+.button05 a:hover {
+  transform: translateY(3px);
+  color: #fff;
+  box-shadow: 0 2px 0 #aaaaaa;
+}
+
+
+</style>
+
+
+<p id="msg">Cookieの読み書きを行います。</p>
+
+
