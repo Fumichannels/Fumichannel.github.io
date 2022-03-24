@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fixco レプリカ生成ページ</title>
+<script type="text/javascript">
+function test() {
+  
+  var name = "Fumi-channel"
+  var name = document.getElementById("textbox").value
+  //描画コンテキストの取得
+  var canvas = document.getElementById('canvas');
+  var ctx = document.getElementById('canvas').getContext('2d');
+  var context = canvas.getContext('2d');
+
+  if (canvas.getContext) {
+    //ここから
+
+    //背景
+    context.fillStyle = '#a6afff'; 
+    context.fillRect(0,0,400,300);
+
+    //背景文字
+    context.fillStyle = '#BAC1FF'
+    ctx.font = "110px serif";
+    ctx.fillText("ETC" , 23, 140)
+  
+    //F xco
+      context.fillStyle = '#fff'; 
+    ctx.font = "18px serif";
+    ctx.fillText("F  XCO", 8, 80);
+
+    //Blue Card
+    ctx.font = "18px serif";
+    ctx.fillText("Blue Card", 131, 80);
+
+    //上側の縦線
+    context.beginPath();
+    context.rect( 23, 0, 2, 60 )
+    context.closePath();
+    context.fill();
+    
+    //「I」の縦文字
+    context.beginPath();
+    context.rect( 23, 65, 2, 14 )
+    context.closePath();
+    context.fill();
+    
+    //下側の縦線
+    context.beginPath();
+context.rect( 23, 85, 2, 155 )
+    context.closePath();
+    context.fill();
+
+
+
+    context.fillStyle = '#000c74'; 
+    context.fillRect(0,30,300,3);
+
+  ctx.font = "30px serif";
+  ctx.fillText("ETC", 67, 80);
+  ctx.font = "15px serif";
+  var name2 = "Name: " + name
+  ctx.fillText(name2, 50, 100);
+
+
+
+  var r1 = 2323;
+  //var r2 = Math.floor( Math.random() * (9999-1001) ) + 1001;
+  var r2 = "Sample"
+  var r3 = Math.floor( Math.random() * (9999-1001) ) + 1001;
+  var r4 = Math.floor( Math.random() * (9999-1001) ) + 1001;
+  var r = "No." +  r1 + "-" + r2 + "-" + r3 + "-" + r4;
+
+
+  ctx.fillText(r , 50, 120)
+
+
+  context.fillStyle = '#fff'; 
+  ctx.font = "12px serif";
+  ctx.fillText("有効期限:2022年8月31日" , 100, 140)
+    context.fillStyle = '#000c74'; 
+
+    //一筆書きでパスを描く
+    context.beginPath();
+    context.moveTo(230,30);
+    context.lineTo(250,30);
+    context.lineTo(230,20);
+    context.closePath();
+    //現在のパスを塗りつぶし
+    context.fill();
+    context.stroke();
+  }
+}
+</script>
+</head>
+<body onLoad="test()" style="color: #a6afff;">
+
+
+<h2>ETCカードのサンプルを生成する</h2>
+
+<!-- 生成 -->
+  <input type="button" value="生成" onclick="test();chgImg()">
+  <p style="color: #000; display: inline;">名前を入力:</p>
+  <input type="text" id="textbox" value="">
+  
+<canvas id="canvas" width="250" height="175" style="display: none;">
+  図形を表示するには、canvasタグをサポートしたブラウザが必要です。
+</canvas>
+
+<script>
+
+  var cvs = document.getElementById("canvas");
+  function chgImg(){
+    var png = cvs.toDataURL();
+    document.getElementById("newImg").src = png;
+  }
+  
+</script>
+<!-- /生成 -->
+
+<!-- 完成 --><div><img id="newImg"></div>
+  <input id="download" type="button" value="画像をダウンロード" />
+<script>
+  document.getElementById("download").onclick = (event) => {
+    let canvas = document.getElementById("canvas");
+
+    let link = document.createElement("a");
+    link.href = canvas.toDataURL("image/png");
+    link.download = "test.png";
+    link.click();
+}
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
