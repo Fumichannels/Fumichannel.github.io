@@ -1,0 +1,158 @@
+
+<body onload="load();"></body>
+
+<script>
+
+
+var numss = 1
+    
+    
+
+    function aa(num){
+        console.log(num)
+        var number1 = 0
+        var number1 = num
+    var x = x1 + 4 * a1
+    var y = y1 + 3 * a1
+            
+            var canvas = document.getElementById('canvas');
+            var ctx = document.getElementById('canvas').getContext('2d');
+            var context = canvas.getContext('2d');
+    
+            canvas.width  = (a1 * 138) + x1 + x2;
+            canvas.height = (a1 * 106) + y1 + y2;
+            context.beginPath () ;
+            context.rect( 0, 0, 10000, 10000 )
+            context.fillStyle = '#' + R + G + B ;
+            context.fill() ;
+            
+    
+    
+    
+    
+        ctx.beginPath();
+    
+            context.moveTo( a1 * 30 + x , a1 *  0 + y ) ;
+            context.lineTo( a1 *  0 + x , a1 * 50 + y ) ;
+            context.lineTo( a1 * 30 + x , a1 *100 + y ) ;
+            context.lineTo( a1 *100 + x , a1 *100 + y ) ;
+            context.lineTo( a1 *130 + x , a1 * 50 + y ) ;
+            context.lineTo( a1 *100 + x , a1 *  0 + y ) ;
+            context.lineTo( a1 * 30 + x , a1 *  0 + y ) ;
+            context.lineTo( a1 *  0 + x , a1 * 50 + y ) ;
+    
+            
+        ctx.fillStyle = "#00c";
+        ctx.fill();
+    
+    
+        ctx.lineWidth = a1 * 7;
+        ctx.strokeStyle = "#00c";
+        ctx.stroke();
+    
+    
+        ctx.lineWidth = a1 * 2;
+        ctx.strokeStyle = "#fff";
+        ctx.stroke();
+        ctx.closePath();
+        
+    
+        var font = 60 * a1 + "px sans-serif";
+        context.textAlign = "center"
+        context.font = font;
+        context.fillStyle = "#fff";
+        context.fillText(number1 , a1 * 65 + x , a1 * 70 + y );
+    }
+                        
+    </script>
+    
+<script>
+    var a1 = 5 //倍率(％)
+//余白(px)
+
+var x1 = 0 //左
+var y1 = 0 //上
+var x2 = 0 //右
+var y2 = 0 //左
+
+//クロマキー
+var R = "00"; //赤
+var G = "ff"; //緑
+var B = "00"; //青
+    
+//番号
+var number1 = 1;
+    function load(){
+        aa(1);
+        chgImg();
+        document.getElementById('canvas').style.display ='none';
+
+    }
+        
+
+</script>
+
+
+
+    <img id="newImg" style="width: 500px; background-color: #000;">
+
+    <div style="display: block; position: absolute; top: 0; left: 510px;">
+        <input type="range" value="1"  min="0" max="10" id="range1" ><br>
+        <input type="button" value="画像に変換" onclick="chgImg()"><br>
+            <script>
+                //canvasデータを画像に変換にする関数
+                function chgImg()
+                {
+                var png = canvas.toDataURL();
+                document.getElementById("newImg").src = png;
+                }
+            </script>
+
+
+
+
+        <input type="text" style="outline: none;" id='numbers' onchange="var numss = document.getElementById('numbers').value;aa(numss);chgImg()"><br>
+
+
+        <input type="button" value="画像をダウンロード" onclick="download();"><br>
+            <script>
+                function download(){
+                    
+                    var canvas = document.getElementById("canvas");
+                    var link = document.createElement("a");
+                    link.href = canvas.toDataURL("image/png");
+
+                    var numss =  document.getElementById('numbers').value
+                    link.download = numss + '.png' 
+                    link.click();
+                }
+            </script>
+
+        <input type="button" value="リアルタイムプレビュー表示切り替え" onclick="prev()">
+            <script>
+                
+
+                function prev(){
+                    
+                    var preview = document.getElementById("canvas");
+                    if(preview.style.display=="block"){
+                        preview.style.display ="none";
+                    }else{
+                        preview.style.display ="block";
+                    }
+                }
+            </script>
+</div>
+
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+<canvas id="canvas" width="100" height="200"></canvas>
